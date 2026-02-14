@@ -25,5 +25,5 @@ variable "bucket_name" {
 variable "project" {
   description = "Project identifier"
   type        = string
-  default     = "assignment3"
+  default     = "jenkins"
 }
