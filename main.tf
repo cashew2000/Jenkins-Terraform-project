@@ -68,7 +68,7 @@ resource "aws_security_group" "devops_sg" {
 resource "aws_instance" "devops_ec2" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
-  key_name      = aws_key_pair.devops_key.key_name
+  key_name = "jenkins-app-key"
   vpc_security_group_ids = [aws_security_group.devops_sg.id]
   iam_instance_profile   = aws_iam_instance_profile.ec2_instance_profile.name #adding IAM profile
   # Pass parameters into user-data template
